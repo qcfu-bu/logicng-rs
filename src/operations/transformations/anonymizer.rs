@@ -1,6 +1,7 @@
 use crate::formulas::{EncodedFormula, FormulaFactory};
 
 use super::Substitution;
+use ahash::HashMapExt;
 
 /// Anonymizer allows to remove/obscure the semantics of variables of formulas.
 ///

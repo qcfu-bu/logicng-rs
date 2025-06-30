@@ -1,5 +1,6 @@
+use ahash::{HashMap, HashMapExt, HashSet};
 use itertools::Itertools;
-use std::collections::{BTreeMap, BTreeSet, HashMap, HashSet};
+use std::collections::{BTreeMap, BTreeSet};
 
 use crate::formulas::{EncodedFormula, FormulaFactory, Variable};
 use crate::graphs::{hypergraph_from_cnf, Hypergraph, NodeIndex};

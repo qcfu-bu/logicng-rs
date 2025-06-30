@@ -6,7 +6,7 @@ mod drup_tests {
     use crate::solver::minisat::sat::Tristate::{False, True};
     use crate::solver::minisat::SolverCnfMethod::{FactoryCnf, PgOnSolver};
     use crate::solver::minisat::{MiniSat, MiniSatConfig, SatBuilder};
-    use std::collections::HashSet;
+    use ahash::HashSet;
     use std::fmt::Debug;
     use std::fs::read_dir;
     use std::hash::Hash;

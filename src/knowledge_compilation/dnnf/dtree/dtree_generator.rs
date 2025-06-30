@@ -1,5 +1,5 @@
+use ahash::{HashMap, HashMapExt, HashSet, HashSetExt};
 use std::cmp::Ordering;
-use std::collections::{HashMap, HashSet};
 use std::iter::repeat;
 
 use itertools::Itertools;

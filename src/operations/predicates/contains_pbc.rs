@@ -1,4 +1,4 @@
-use std::collections::HashSet;
+use ahash::{HashSet, HashSetExt};
 
 use crate::formulas::{EncodedFormula, FormulaFactory, FormulaType};
 

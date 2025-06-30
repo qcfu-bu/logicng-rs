@@ -29,6 +29,7 @@ num-bigint = "0.4.4"
 pest = "2.7.3"
 pest_derive = "2.7.3"
 dashmap = "5.5.3"
+ahash = "0.8.12"
 logicng-open-wbo-sys = { version = "0.1.0-alpha.3", path = "lib/open_wbo_ffi", optional = true }
 logicng-sharp-sat-sys = {version = "0.1.0-alpha.1", path = "lib/sharp_sat_ffi", optional = true }
 
@@ -41,6 +42,11 @@ sharp_sat = ["dep:logicng-sharp-sat-sys"]
 
 [profile.release]
 debug = true # no runtime costs involved
+overflow-checks = false
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
 
 [[example]]
 name = "misc"

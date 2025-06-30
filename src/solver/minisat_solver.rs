@@ -1,6 +1,7 @@
 #![allow(clippy::cast_possible_wrap, clippy::cast_sign_loss)]
 
-use std::collections::{BTreeSet, HashMap};
+use ahash::HashMap;
+use std::collections::BTreeSet;
 use std::ops::Deref;
 use std::sync::Arc;
 

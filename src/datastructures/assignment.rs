@@ -1,5 +1,5 @@
-use std::collections::hash_map::DefaultHasher;
-use std::collections::{BTreeSet, HashSet};
+use ahash::{AHasher, HashSet, HashSetExt};
+use std::collections::BTreeSet;
 use std::hash::{Hash, Hasher};
 use std::num::Wrapping;
 
@@ -684,7 +684,7 @@ impl From<Assignment> for Model {
 }
 
 fn var_hash(var: Variable) -> Wrapping<u64> {
-    let hasher = &mut DefaultHasher::new();
+    let hasher = &mut AHasher::default();
     var.hash(hasher);
     Wrapping(hasher.finish())
 }

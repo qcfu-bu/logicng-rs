@@ -1,7 +1,7 @@
 use crate::formulas::FormulaFactory;
 use crate::solver::maxsat::{Algorithm, MaxSatResult, MaxSatSolver};
 use crate::solver::maxsat_config::MaxSatConfig;
-use std::collections::HashMap;
+use ahash::HashMap;
 use std::io::BufRead;
 
 mod pure_maxsat_tests {

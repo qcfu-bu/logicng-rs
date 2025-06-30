@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+use ahash::{HashMap, HashMapExt};
 
 use crate::formulas::{EncodedFormula, Formula, FormulaFactory, Variable};
 

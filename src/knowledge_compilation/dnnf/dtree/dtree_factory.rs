@@ -1,6 +1,6 @@
 #![allow(clippy::cast_possible_truncation, clippy::cast_sign_loss, clippy::cast_possible_wrap)]
 
-use std::collections::HashSet;
+use ahash::HashSet;
 use std::iter::repeat;
 use std::ops::{BitAndAssign, BitOr};
 use std::sync::Arc;

@@ -1,5 +1,4 @@
-use std::collections::hash_map::DefaultHasher;
-use std::collections::HashSet;
+use ahash::{AHasher, HashSet};
 use std::fmt::Debug;
 use std::hash::{Hash, Hasher};
 
@@ -16,11 +15,12 @@ impl<E: Encoding> HashableFormulaSet<E> {
 }
 
 impl<E> Hash for HashableFormulaSet<E>
-where E: Encoding + Clone + Copy + Debug + PartialEq + Eq + Hash
+where
+    E: Encoding + Clone + Copy + Debug + PartialEq + Eq + Hash,
 {
     fn hash<H: Hasher>(&self, state: &mut H) {
         for op in &self.base {
-            let mut op_hasher = DefaultHasher::new();
+            let mut op_hasher = AHasher::default();
             op.hash(&mut op_hasher);
             op_hasher.finish().hash(state);
         }
@@ -28,7 +28,8 @@ where E: Encoding + Clone + Copy + Debug + PartialEq + Eq + Hash
 }
 
 impl<E> PartialEq for HashableFormulaSet<E>
-where E: Encoding + Clone + Copy + Debug + PartialEq + Eq + Hash
+where
+    E: Encoding + Clone + Copy + Debug + PartialEq + Eq + Hash,
 {
     fn eq(&self, other: &Self) -> bool {
         self.base.eq(&other.base)

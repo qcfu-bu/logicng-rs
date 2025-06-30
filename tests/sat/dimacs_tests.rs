@@ -1,6 +1,6 @@
 extern crate logicng;
 
-use std::collections::HashMap;
+use ahash::HashMap;
 use std::fs::File;
 use std::io::{stdout, BufRead, BufReader, Error, Write};
 use std::iter::FromIterator;

@@ -1,4 +1,4 @@
-use std::collections::HashSet;
+use ahash::{HashSet, HashSetExt};
 use std::sync::Arc;
 
 use crate::formulas::operation_cache::OperationCache;

@@ -4,7 +4,7 @@ mod plaisted_greenbaum_on_formula;
 pub(super) mod plaisted_greenbaum_on_solver;
 mod tseitin;
 
-use std::collections::HashMap;
+use ahash::HashMap;
 
 use crate::formulas::{EncodedFormula, FormulaFactory, Literal};
 use crate::handlers::{FactorizationError, FactorizationHandler};

@@ -315,7 +315,7 @@ pub fn count_models<B>(solver: &mut MiniSat2Solver<B>, max_models: usize) -> usi
 
 #[cfg(test)]
 mod tests {
-    use std::collections::HashSet;
+    use ahash::HashSet;
 
     use itertools::Itertools;
 

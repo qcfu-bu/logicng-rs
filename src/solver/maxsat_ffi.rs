@@ -5,8 +5,9 @@ use crate::solver::maxsat::{
     Algorithm, CardinalEncoding, GraphType, MaxSatConfig, MaxSatResult, MaxSatStats, MergeStrategy, PbEncoding, Symmetry, Verbosity,
     WeightStrategy,
 };
+use ahash::HashSet;
 use logicng_open_wbo_sys::ffi;
-use std::collections::{BTreeSet, HashMap};
+use std::collections::BTreeSet;
 use std::fmt::{Debug, Display, Formatter};
 
 /// Stores different types of errors that can happen during the setup or search

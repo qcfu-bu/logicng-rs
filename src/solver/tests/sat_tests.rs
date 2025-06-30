@@ -1,4 +1,5 @@
-use std::collections::{BTreeSet, HashMap, HashSet};
+use ahash::{HashMap, HashSet};
+use std::collections::BTreeSet;
 use std::fs;
 use std::fs::File;
 use std::io::{BufRead, BufReader};

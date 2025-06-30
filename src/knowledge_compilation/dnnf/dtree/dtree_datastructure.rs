@@ -1,4 +1,4 @@
-use std::collections::HashSet;
+use ahash::HashSet;
 
 use crate::formulas::Variable;
 use crate::knowledge_compilation::dnnf::dtree::dtree_factory::DTreeFactory;

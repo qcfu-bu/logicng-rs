@@ -1,8 +1,8 @@
 #![allow(non_snake_case)]
 #![allow(dead_code)]
 
+use ahash::AHasher;
 use std::borrow::Cow;
-use std::collections::hash_map::DefaultHasher;
 use std::collections::BTreeSet;
 use std::hash::{Hash, Hasher};
 
@@ -34,8 +34,10 @@ pub fn lits_list(elements: &str, f: &FormulaFactory) -> Vec<Literal> {
 }
 
 pub fn hash<H>(element: H) -> u64
-where H: Hash {
-    let mut hasher = DefaultHasher::new();
+where
+    H: Hash,
+{
+    let mut hasher = AHasher::default();
     element.hash(&mut hasher);
     hasher.finish()
 }

@@ -1,4 +1,5 @@
-use std::collections::{HashSet, VecDeque};
+use ahash::{HashSet, HashSetExt};
+use std::collections::VecDeque;
 
 use crate::formulas::{EncodedFormula, Formula, FormulaFactory, Variable};
 

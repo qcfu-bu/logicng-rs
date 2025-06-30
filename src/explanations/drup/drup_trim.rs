@@ -18,7 +18,7 @@
 
 #![allow(clippy::cast_sign_loss, clippy::cast_possible_wrap)]
 
-use std::collections::HashMap;
+use ahash::{HashMap, HashMapExt};
 use std::num::Wrapping;
 
 use crate::collections::LNG_VEC_INIT_SIZE;

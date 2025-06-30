@@ -1,4 +1,4 @@
-use std::collections::HashSet;
+use ahash::HashSet;
 use std::fmt::Debug;
 use std::hash::{BuildHasherDefault, Hash};
 use std::vec::IntoIter;

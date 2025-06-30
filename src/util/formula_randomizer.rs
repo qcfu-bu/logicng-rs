@@ -1163,7 +1163,8 @@ impl FormulaRandomizer {
 
 #[cfg(test)]
 mod tests {
-    use std::collections::{BTreeSet, HashMap};
+    use ahash::{HashMap, HashMapExt};
+    use std::collections::BTreeSet;
 
     use CType::{GE, GT, LT};
 

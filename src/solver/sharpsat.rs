@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+use ahash::HashMap;
 use std::str::FromStr;
 
 use logicng_sharp_sat_sys::ffi;
@@ -224,7 +224,6 @@ mod tests {
     use crate::util::read_model_counting_examples::read_cnf;
 
     use super::SharpSatSolver;
-
 
     #[test]
     fn empty_solver() {

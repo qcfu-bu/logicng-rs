@@ -6,7 +6,7 @@ use crate::propositions::Proposition;
 use crate::solver::minisat::sat::MsVar;
 use crate::solver::minisat::sat::Tristate::{True, Undef};
 use crate::solver::minisat::MiniSat;
-use std::collections::HashMap;
+use ahash::{HashMap, HashMapExt};
 
 /// Computes the [`UnsatCore`] if the formula is unsatisfiable.
 pub fn compute_unsat_core<B: PartialEq>(solver: &MiniSat<B>, f: &FormulaFactory) -> UnsatCore<B> {

@@ -1,4 +1,5 @@
-use std::collections::{BTreeMap, BTreeSet, HashSet};
+use ahash::{HashSet, HashSetExt};
+use std::collections::{BTreeMap, BTreeSet};
 
 type NodeIndex = usize;
 type ChildrenIndex = usize;
